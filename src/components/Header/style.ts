@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.header`
+interface ContainerProps {
+  changeBackground: boolean;
+}
+
+export const Container = styled.header<ContainerProps>`
   display: grid;
   width: 100vw;
   position: fixed;
@@ -8,6 +12,12 @@ export const Container = styled.header`
   padding: 5px;
   grid-column-gap: 50px;
   align-items: center;
+
+  ${props =>
+    props.changeBackground &&
+    css`
+      background-color: #000;
+    `}
 `;
 
 export const Logo = styled.div`
