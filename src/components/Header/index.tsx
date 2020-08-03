@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   const posY = useScrollYPosition();
 
   useEffect(() => {
-    setChangeBackground(posY > 200);
+    setChangeBackground(posY > 300);
   }, [posY]);
 
   return (

@@ -16,7 +16,7 @@ export const Container = styled.header<ContainerProps>`
   ${props =>
     props.changeBackground &&
     css`
-      background-color: #000;
+      background-color: #14171f;
     `}
 `;
 

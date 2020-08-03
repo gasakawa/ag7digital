@@ -33,7 +33,7 @@ export const Container = styled.div`
 export const Button = styled.div`
   bottom: 30px;
   position: absolute;
-  left: 0;
+  padding: 0 30px;
   width: 100%;
 
   a {
