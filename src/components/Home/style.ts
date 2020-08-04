@@ -17,7 +17,7 @@ export const Container = styled.div`
   color: #fff;
 
   h1 {
-    font-size: 4.8em;
+    font-size: 3.73em;
     font-weight: 300;
     line-height: 1.2;
     margin: 0 0 10px;
@@ -25,7 +25,7 @@ export const Container = styled.div`
     letter-spacing: -0.3px;
 
     ${media.lessThan('medium')`
-        font-size: 3.73em;
+        font-size: 2.73em;
     `}
   }
 `;
@@ -35,6 +35,10 @@ export const Button = styled.div`
   position: absolute;
   padding: 0 30px;
   width: 100%;
+
+  ${media.lessThan('medium')`
+    padding: 0;
+  `}
 
   a {
     background: transparent;

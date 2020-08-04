@@ -1,8 +1,14 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.img`
-  height: 4.75rem;
-  margin: 0.375rem;
-  width: 8.75rem;
+  height: 110px;
+  width: 225px;
   margin-left: 2em;
+
+  ${media.lessThan('medium')`
+    margin-left: 0;
+    height: 95px;
+  width: 190px;
+  `}
 `;

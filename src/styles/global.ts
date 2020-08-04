@@ -45,5 +45,18 @@ body, input, button {
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
+
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space: 24px;
+    --space-md: 32px;
+    --space-lg: 48px;
+    --space-xlg: 64px;
+    --screen-xs: 360px;
+    --screen-sm: 768px;
+    --screen-md: 992px;
+    --screen-lg: 1280px;
+    --screen-xlg: 1440px;
 }
 `;

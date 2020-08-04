@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useScrollYPosition } from 'react-use-scroll-position';
 
 import * as S from './style';

@@ -1,17 +1,22 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 interface ContainerProps {
   changeBackground: boolean;
 }
 
 export const Container = styled.header<ContainerProps>`
-  display: grid;
+  display: flex;
   width: 100vw;
   position: fixed;
-  grid-template-columns: auto auto;
   padding: 5px;
-  grid-column-gap: 50px;
   align-items: center;
+  justify-content: space-between;
+
+  ${media.lessThan('medium')`
+    padding: 0;
+    align-items: flex-start;
+  `}
 
   ${props =>
     props.changeBackground &&
@@ -22,11 +27,19 @@ export const Container = styled.header<ContainerProps>`
 
 export const Logo = styled.div`
   padding: 20px;
+
+  ${media.lessThan('medium')`
+    padding: 0;
+
+  `}
 `;
 
 export const Menu = styled.div`
   padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-right: 100px;
+
+  ${media.lessThan('medium')`
+    display:none;
+  `}
 `;

@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 160px 0;
 
   ${media.lessThan('medium')`
-    adding: 100px 0;
+    padding: 120px 60px 0;
   `}
 `;
 
