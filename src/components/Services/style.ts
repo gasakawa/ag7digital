@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 2em;
+  margin-right: 5px;
   padding: 80px 0;
 
   ${media.lessThan('medium')`

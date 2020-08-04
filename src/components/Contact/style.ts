@@ -36,10 +36,15 @@ export const Form = styled.form`
   padding: 15px;
   width: 50%;
 
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
+
   div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     flex: 1;
     input,

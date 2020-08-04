@@ -4,6 +4,8 @@ import media from 'styled-media-query';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 2em;
   padding: 160px 0;
 
@@ -33,6 +35,10 @@ export const AboutImage = styled.div`
   justify-content: center;
   margin-right: 3rem;
 
+  ${media.lessThan('medium')`
+       margin: 0;
+    `}
+
   img {
     box-shadow: 0 0 30px 0 rgba(22, 24, 26, 0.1);
     width: 550px;
@@ -53,17 +59,31 @@ export const AboutText = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
 
+  ${media.lessThan('medium')`
+    max-width: 100%;
+  `}
+
   h2 {
     font-size: 2.13em;
     line-height: 1.625;
-    font-weight: 300;
-    margin: 0 0 10px;
+    font-weight: 500;
     color: #131517;
+    margin-bottom: 10px;
+
+    ${media.lessThan('medium')`
+        font-size: 1.13em;
+        font-weight: 500;
+    `}
   }
 
   p {
     line-height: 1.86;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
+
+    ${media.lessThan('medium')`
+        font-size: 0.8em;
+
+    `}
   }
 `;

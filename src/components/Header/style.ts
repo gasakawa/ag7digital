@@ -14,7 +14,7 @@ export const Container = styled.header<ContainerProps>`
   justify-content: space-between;
 
   ${media.lessThan('medium')`
-    padding: 0;
+    /* padding: 0; */
     align-items: flex-start;
   `}
 
@@ -22,6 +22,7 @@ export const Container = styled.header<ContainerProps>`
     props.changeBackground &&
     css`
       background-color: #14171f;
+      padding: 5px;
     `}
 `;
 
@@ -37,9 +38,13 @@ export const Logo = styled.div`
 export const Menu = styled.div`
   padding: 20px;
   display: flex;
+  align-items: center;
+  justify-items: center;
   margin-right: 100px;
+  margin-top: 5px;
 
   ${media.lessThan('medium')`
-    display:none;
+    margin-right: 0;
+
   `}
 `;
