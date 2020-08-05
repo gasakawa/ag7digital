@@ -23,10 +23,7 @@ const Services: React.FC = () => {
         <div>
           <FiUsers size={42} />
           <span>Social Media</span>
-          <p>
-            Administración de cuentas de publicidad (Facebook Ads / Google AdWords), con metodología focada en generar
-            conversiones.
-          </p>
+          <p>Asesoría y acompañamiento en el manejo de redes sociales</p>
         </div>
         <div>
           <FaWpforms size={42} />

@@ -52,6 +52,7 @@ export const ServicesList = styled.section`
       font-weight: 400;
       font-size: 1.33em;
       line-height: 1.8;
+      margin-bottom: var(--space-xs);
     }
 
     p {

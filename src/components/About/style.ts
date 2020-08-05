@@ -22,11 +22,6 @@ export const AboutDetails = styled.div`
   ${media.lessThan('medium')`
     flex-direction: column;
   `}
-
-  margin-right: -25px;
-  margin-bottom: -50px;
-  margin-left: -25px;
-  padding: 0 25px;
 `;
 
 export const AboutImage = styled.div`
