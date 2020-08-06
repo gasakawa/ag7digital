@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiInstagram, FiTwitter, FiLinkedin } from 'react-icons/fi';
+import { FiInstagram, FiLinkedin } from 'react-icons/fi';
 
 import * as S from './style';
 
@@ -9,10 +9,9 @@ const Footer: React.FC = () => {
       <S.FooterContact>
         <span>contacto@ag7digital.com</span>
         <div>
-          <FiInstagram size={16} title="instagram" />
-        </div>
-        <div>
-          <FiTwitter size={16} title="twitter" />
+          <a href="https://www.instagram.com/ag7.digital/" target="_blank" rel="noreferrer">
+            <FiInstagram size={16} title="instagram" />
+          </a>
         </div>
         <div>
           <FiLinkedin size={16} title="linkedin" />

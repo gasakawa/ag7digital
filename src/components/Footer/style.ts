@@ -38,5 +38,14 @@ export const FooterContact = styled.div`
     border-radius: 50%;
     margin: 10px;
     border: 1px solid rgba(250, 250, 250, 0.5);
+
+    a {
+      text-decoration: none;
+      display: flex;
+
+      svg {
+        color: #fff;
+      }
+    }
   }
 `;
