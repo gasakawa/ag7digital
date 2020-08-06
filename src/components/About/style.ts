@@ -68,6 +68,7 @@ export const AboutText = styled.div`
     ${media.lessThan('medium')`
         font-size: 1.13em;
         font-weight: 500;
+        margin-top: 10px;
     `}
   }
 

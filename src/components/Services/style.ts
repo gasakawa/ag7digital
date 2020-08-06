@@ -36,16 +36,18 @@ export const ServicesList = styled.section`
   grid-column-gap: 50px;
   color: #131517;
   padding: 15px;
+  width: 70%;
+
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
 
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 10px;
-    border: 1px solid #1b2431;
-    border-radius: var(--space-xs);
-    box-shadow: 0 0 30px 0 rgba(140, 140, 140, 0.3);
 
     span {
       margin-top: 20px;

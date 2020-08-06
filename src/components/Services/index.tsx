@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRegCommentAlt, FaWpforms } from 'react-icons/fa';
+import { FaWpforms } from 'react-icons/fa';
 import { FiUsers } from 'react-icons/fi';
 import { GoMegaphone } from 'react-icons/go';
 
@@ -9,36 +9,33 @@ const Services: React.FC = () => {
   return (
     <S.Container id="services">
       <S.Title>
-        <h2>Que hacemos</h2>
+        <h2>¿Que hacemos?</h2>
       </S.Title>
       <S.ServicesList>
         <div>
-          <FaRegCommentAlt size={42} />
-          <span>Consultoría</span>
-          <p>
-            Administración de cuentas de publicidad (Facebook Ads / Google AdWords), con metodología focada en generar
-            conversiones.
-          </p>
-        </div>
-        <div>
           <FiUsers size={42} />
           <span>Social Media</span>
-          <p>Asesoría y acompañamiento en el manejo de redes sociales</p>
+          <p>
+            Elaboramos estrategias en conjunto con nuestros clientes de acuerdo al Buyer Persona de su negocio, creando
+            contenidos relevantes para los seguidores utilizando el canal de distribución que más se adecua a la
+            estrategia.
+          </p>
         </div>
         <div>
           <FaWpforms size={42} />
           <span>Diseño Web</span>
           <p>
-            Administración de cuentas de publicidad (Facebook Ads / Google AdWords), con metodologías focadas en generar
-            conversiones.
+            Diseñamos su sitio web con los más altos estándares de calidad, escalables y compatibles con dispositivos
+            móviles, optimizados para SEO, facilitando que sus clientes potenciales lo encuentren de forma rápida con el
+            fin de lograr los objetivos.
           </p>
         </div>
         <div>
           <GoMegaphone size={42} />
           <span>Tráfico Pago</span>
           <p>
-            Administración de cuentas de publicidad (Facebook Ads / Google AdWords), con metodología focada en generar
-            conversiones.
+            Elaboramos estrategias de anuncios focadas en los objetivos de nuestros clientes, aprovechando al máximo las
+            características de las herramientas de tráfico pago (Facebook Ads / Google Ads).
           </p>
         </div>
       </S.ServicesList>
