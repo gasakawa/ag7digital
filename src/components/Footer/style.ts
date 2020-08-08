@@ -30,6 +30,13 @@ export const FooterContact = styled.div`
   flex-direction: row;
   align-items: center;
 
+  span {
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
   div {
     display: flex;
     align-items: center;
