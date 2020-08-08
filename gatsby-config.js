@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `AG7 Digital Business`,
@@ -49,6 +51,13 @@ module.exports = {
         theme_color: '#16202c',
         display: 'minimal-ui',
         icon: 'src/images/logocolor.png',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+        head: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
