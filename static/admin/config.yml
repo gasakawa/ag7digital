@@ -1,0 +1,5 @@
+backend:
+  name: github
+  repo: gasakawa/ag7digital
+  branch: master
+  site_domain: ag7digital.com

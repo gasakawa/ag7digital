@@ -25,9 +25,8 @@ const Services: React.FC = () => {
           <FaWpforms size={42} />
           <span>Diseño Web</span>
           <p>
-            Diseñamos su sitio web con los más altos estándares de calidad, escalables y compatibles con dispositivos
-            móviles, optimizados para SEO, facilitando que sus clientes potenciales lo encuentren de forma rápida con el
-            fin de lograr los objetivos.
+            Diseñamos su sitio moderno, escalable y compatible con dispositivos móviles, optimizado para SEO,
+            facilitando que sus clientes potenciales lo encuentren de forma rápida con el fin de lograr los objetivos.
           </p>
         </div>
         <div>

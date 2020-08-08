@@ -7,6 +7,7 @@ interface ContainerProps {
 
 export const Container = styled.header<ContainerProps>`
   display: flex;
+  background-color: #14171f;
   width: 100vw;
   position: fixed;
   padding: 5px;
