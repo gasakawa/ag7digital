@@ -45,13 +45,7 @@ const Contact: React.FC = () => {
         </S.MessageBox>
       )}
 
-      <S.Form
-        name="contact"
-        method="post"
-        data-netlify="true"
-        onSubmit={handleSubmit(onSubmit)}
-        data-netlify-honeypot="bot-field"
-      >
+      <S.Form name="contact" method="post" onSubmit={handleSubmit(onSubmit)}>
         <div>
           <input
             type="text"
