@@ -93,3 +93,12 @@ export const Button = styled.div`
     }
   }
 `;
+
+export const Error = styled.span`
+  display: flex;
+  align-self: flex-start;
+  font-size: 0.8rem;
+  margin-top: 1px;
+  color: #c53030;
+  margin-left: 10px;
+`;

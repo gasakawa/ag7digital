@@ -11,7 +11,7 @@ export const Container = styled.ul<ContainerProps>`
   padding: 10px;
   font-size: 1rem;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
     display: none;
   `}
 

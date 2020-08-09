@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 const IndexPage: React.FC = () => {
   return (
-    <Layout>
+    <Layout showHeaderMenu>
       <SEO title="Home" meta={[]} />
       <Home />
       <About />

@@ -5,12 +5,16 @@ import GlobalStyles from '../../styles/global';
 
 import * as S from './style';
 
-const Layout: React.FC = ({ children }) => {
+interface Props {
+  showHeaderMenu?: boolean;
+}
+
+const Layout: React.FC<Props> = ({ showHeaderMenu = false, children }) => {
   return (
     <>
       <GlobalStyles />
       <S.Container>
-        <Header />
+        <Header showHeaderMenu={showHeaderMenu} />
         <main>{children}</main>
       </S.Container>
     </>

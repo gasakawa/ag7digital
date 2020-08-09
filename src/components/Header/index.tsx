@@ -5,7 +5,11 @@ import * as S from './style';
 import Logo from '../Logo';
 import MenuLinks from '../MenuLinks';
 
-const Header: React.FC = () => {
+interface Props {
+  showHeaderMenu?: boolean;
+}
+
+const Header: React.FC<Props> = ({ showHeaderMenu }) => {
   const [changeBackground, setChangeBackground] = useState(false);
 
   const posY = useScrollYPosition();
@@ -19,9 +23,11 @@ const Header: React.FC = () => {
       <S.Logo>
         <Logo />
       </S.Logo>
-      <S.Menu>
-        <MenuLinks />
-      </S.Menu>
+      {showHeaderMenu && (
+        <S.Menu>
+          <MenuLinks />
+        </S.Menu>
+      )}
     </S.Container>
   );
 };

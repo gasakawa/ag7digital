@@ -7,7 +7,7 @@ import * as S from './style';
 
 const Services: React.FC = () => {
   return (
-    <S.Container id="services">
+    <S.Container id="servicios">
       <S.Title>
         <h2>¿Que hacemos?</h2>
       </S.Title>

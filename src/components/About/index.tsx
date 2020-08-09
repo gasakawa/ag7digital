@@ -5,7 +5,7 @@ import aboutImage from '../../images/about.jpg';
 
 const About: React.FC = () => {
   return (
-    <S.Container id="about">
+    <S.Container id="quienes_somos">
       <S.AboutDetails>
         <S.AboutImage>
           <img src={aboutImage} alt="" />

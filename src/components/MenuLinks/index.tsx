@@ -12,13 +12,13 @@ const MenuLinks: React.FC = () => {
     <>
       <S.Container showSideMenu={showSideMenu}>
         <li>
-          <AnchorLink to="/#about">Quienes somos</AnchorLink>
+          <AnchorLink to="/#quienes_somos">Quienes somos</AnchorLink>
         </li>
         <li>
-          <AnchorLink to="/#services">Servicios</AnchorLink>
+          <AnchorLink to="/#servicios">Servicios</AnchorLink>
         </li>
         <li>
-          <AnchorLink to="/#contact">Contacto</AnchorLink>
+          <AnchorLink to="/#contacto">Contacto</AnchorLink>
         </li>
       </S.Container>
       <S.Button
@@ -31,7 +31,7 @@ const MenuLinks: React.FC = () => {
       <S.SideMenu showSideMenu={showSideMenu}>
         <li>
           <Link
-            to="/#about"
+            to="/#quienes_somos"
             onClick={() => {
               setShowSideMenu(false);
             }}
@@ -40,11 +40,18 @@ const MenuLinks: React.FC = () => {
           </Link>
         </li>
         <li>
-          <AnchorLink to="/#services">Servicios nuevos</AnchorLink>
+          <Link
+            to="/#servicios"
+            onClick={() => {
+              setShowSideMenu(false);
+            }}
+          >
+            Servicios
+          </Link>
         </li>
         <li>
           <Link
-            to="/#contact"
+            to="/#contacto"
             onClick={() => {
               setShowSideMenu(false);
             }}
