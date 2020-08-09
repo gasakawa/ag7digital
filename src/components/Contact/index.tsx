@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
   const { register, handleSubmit, errors } = useForm<ContactProps>();
 
   const onSubmit = useCallback(async (data: ContactProps) => {
-    const response = await axios.post(`/.netlify/funcions/sendmail`, data);
+    const response = await axios.post(`/.netlify/functions/sendmail`, data);
     console.log(response.data);
   }, []);
   return (
