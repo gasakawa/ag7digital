@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
@@ -64,4 +65,15 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  developMiddleware: app => {
+    app.use(
+      '/.netlify/functions/',
+      createProxyMiddleware({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/.netlify/functions/': '',
+        },
+      }),
+    );
+  },
 };

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import axios from 'axios';
 
 import { ErrorMessage } from '@hookform/error-message';
@@ -15,17 +15,36 @@ interface ContactProps {
 }
 
 const Contact: React.FC = () => {
-  const { register, handleSubmit, errors } = useForm<ContactProps>();
+  const { register, handleSubmit, errors, reset } = useForm<ContactProps>();
+  const [showMessage, setShowMessage] = useState(false);
 
-  const onSubmit = useCallback(async (data: ContactProps) => {
-    const response = await axios.post(`/.netlify/functions/sendmail`, data);
-    console.log(response.data);
-  }, []);
+  const onSubmit = useCallback(
+    async (data: ContactProps) => {
+      try {
+        await axios.post(`/.netlify/functions/sendmail`, data);
+        reset();
+        setShowMessage(true);
+        setTimeout(() => {
+          setShowMessage(false);
+        }, 3000);
+      } catch (e) {
+        setShowMessage(false);
+      }
+    },
+    [reset],
+  );
   return (
     <S.Container id="contacto">
       <S.Title>
         <h2>Contacto</h2>
       </S.Title>
+      {showMessage && (
+        <S.MessageBox>
+          <h1>Gracias por su contacto</h1>
+          <span>Recibimos su mensaje, lo contactaremos pronto</span>
+        </S.MessageBox>
+      )}
+
       <S.Form
         name="contact"
         method="post"
@@ -33,7 +52,6 @@ const Contact: React.FC = () => {
         onSubmit={handleSubmit(onSubmit)}
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" ref={register} />
         <div>
           <input
             type="text"

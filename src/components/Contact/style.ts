@@ -102,3 +102,26 @@ export const Error = styled.span`
   color: #c53030;
   margin-left: 10px;
 `;
+
+export const MessageBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #ebf8ff;
+  height: auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 0.0753em;
+  color: #3172b7;
+
+  h1 {
+    font-weight: 600;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-weight: 300;
+    font-size: 1em;
+  }
+`;
