@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     <S.Container>
       <h1>Estrategias digitales para impulsar tu negocio</h1>
       <S.Button>
-        <AnchorLink to="/#about">
+        <AnchorLink to="/#quienes_somos">
           <FiArrowDown size={32} />
         </AnchorLink>
       </S.Button>
