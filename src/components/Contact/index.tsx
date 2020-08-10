@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import axios from 'axios';
+import ReactGA from 'react-ga';
 
 import { ErrorMessage } from '@hookform/error-message';
 import { useForm } from 'react-hook-form';
@@ -17,6 +18,14 @@ interface ContactProps {
 const Contact: React.FC = () => {
   const { register, handleSubmit, errors, reset } = useForm<ContactProps>();
   const [showMessage, setShowMessage] = useState(false);
+
+  const sendButtonClick = (): void => {
+    ReactGA.event({
+      category: 'contact',
+      action: 'click',
+      label: `Send Message`,
+    });
+  };
 
   const onSubmit = useCallback(
     async (data: ContactProps) => {
@@ -78,6 +87,18 @@ const Contact: React.FC = () => {
         <div>
           <input
             type="text"
+            id="phone"
+            name="phone"
+            placeholder="Teléfono"
+            ref={register({
+              required: 'Campo obligatorio',
+            })}
+          />
+          <S.Error>
+            <ErrorMessage errors={errors} name="phone" />
+          </S.Error>
+          <input
+            type="text"
             id="subject"
             name="subject"
             placeholder="Asunto"
@@ -105,7 +126,14 @@ const Contact: React.FC = () => {
           </S.Error>
         </div>
         <S.Button>
-          <button type="submit">ENVIAR</button>
+          <button
+            type="submit"
+            onClick={() => {
+              sendButtonClick();
+            }}
+          >
+            ENVIAR
+          </button>
         </S.Button>
       </S.Form>
     </S.Container>

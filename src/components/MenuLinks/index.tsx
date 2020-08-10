@@ -1,24 +1,56 @@
 import React, { useState } from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { FiMenu } from 'react-icons/fi';
-
 import { Link } from 'gatsby';
+import ReactGA from 'react-ga';
+
 import * as S from './style';
 
 const MenuLinks: React.FC = () => {
   const [showSideMenu, setShowSideMenu] = useState(false);
 
+  const menuLinkClickTrack = (link: string): void => {
+    ReactGA.event({
+      category: 'menu link',
+      action: 'click',
+      label: `Menu Link - ${link}`,
+    });
+  };
+
   return (
     <>
       <S.Container showSideMenu={showSideMenu}>
         <li>
-          <AnchorLink to="/#quienes_somos">Quienes somos</AnchorLink>
+          <Link
+            to="/#quienes_somos"
+            onClick={() => {
+              menuLinkClickTrack('quienes somos');
+              setShowSideMenu(false);
+            }}
+          >
+            Quienes somos
+          </Link>
         </li>
         <li>
-          <AnchorLink to="/#servicios">Servicios</AnchorLink>
+          <Link
+            to="/#servicios"
+            onClick={() => {
+              menuLinkClickTrack('servicios');
+              setShowSideMenu(false);
+            }}
+          >
+            Servicios
+          </Link>
         </li>
         <li>
-          <AnchorLink to="/#contacto">Contacto</AnchorLink>
+          <Link
+            to="/#contacto"
+            onClick={() => {
+              menuLinkClickTrack('contacto');
+              setShowSideMenu(false);
+            }}
+          >
+            Contacto
+          </Link>
         </li>
       </S.Container>
       <S.Button
@@ -33,6 +65,7 @@ const MenuLinks: React.FC = () => {
           <Link
             to="/#quienes_somos"
             onClick={() => {
+              menuLinkClickTrack('quienes somos');
               setShowSideMenu(false);
             }}
           >
@@ -43,6 +76,7 @@ const MenuLinks: React.FC = () => {
           <Link
             to="/#servicios"
             onClick={() => {
+              menuLinkClickTrack('servicios');
               setShowSideMenu(false);
             }}
           >
@@ -53,6 +87,7 @@ const MenuLinks: React.FC = () => {
           <Link
             to="/#contacto"
             onClick={() => {
+              menuLinkClickTrack('contacto');
               setShowSideMenu(false);
             }}
           >

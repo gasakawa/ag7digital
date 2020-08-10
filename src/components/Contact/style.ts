@@ -75,9 +75,6 @@ export const Button = styled.div`
     cursor: pointer;
     background: #fff;
     padding: 16px 42px;
-
-    position: relative;
-    overflow: hidden;
     border: 1px solid #016795;
     padding: 10px 15px;
     color: #131517;

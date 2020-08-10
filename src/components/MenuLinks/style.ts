@@ -60,7 +60,8 @@ export const SideMenu = styled.ul<ContainerProps>`
       /* display: flex;
       flex-direction: column; */
       overflow-y: auto;
-      background: #314751;
+      background: #fff;
+      border: 1px solid #ebf8ff;
       width: 300px;
       height: 100vh;
       box-shadow: 10px 10px  30px 0 rgba(255,255,255, 0.30);
@@ -69,17 +70,17 @@ export const SideMenu = styled.ul<ContainerProps>`
       transition: visibility 10s linear;
       opacity: 1;
       transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-      color: #fff;
 
       li {
         margin-right: 10px;
         margin-left: 10px;
-        color: #fff;
+
 
         a {
         text-decoration: none;
-        color: #fff;
-        font-size: 0.8em;
+        color: #14171f;
+
+        font-size: 1em;
 
             &:hover {
                 border-bottom: 1px solid #fff;
